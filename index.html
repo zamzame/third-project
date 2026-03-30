@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+
+    <style>
+
+        header {
+            background-color: cadetblue;
+            color: white;
+            padding: 30px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            width: 100%;
+            margin: 0;
+            padding: 50px;
+        }        
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;            
+        }
+
+        /* 1. Responsive Navigation Bar */
+        .main-title {
+            text-align: center;
+        }
+        .navigate-sec {
+            display: flex;
+            /* justify-content: space-between; */
+            /* align-items: center; */
+            /* padding: 25px; */   
+            width: 300px;
+            height: 100px;            
+            padding: 0;        
+            /* flex-direction: row;            */
+        }  
+        
+        .logo {
+            width: 50px;
+            border-radius: 50%;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            /* flex-direction: column; */
+            color: blue;  
+            list-style: none;
+        }
+        
+        .nav-links li{
+            margin-left: 20px;
+        }
+
+        .nav-links li:hover {
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: gainsboro;
+        }
+
+        /* Feature/Project Card Info */
+
+        .card {
+            display: grid;
+            /* 2 columns */
+            grid-template-columns: 1fr 2fr;
+
+            /* 3 rows */
+            grid-template-rows: auto auto auto auto;
+
+            justify-content: center;
+            gap: 15px;
+            width: 90%;
+            padding: 2px;
+            /* margin:20px; */
+            border: 1px solid #ccc;
+            background-color: orange;
+            align-items: stretch;
+
+            /* Shadow */
+            box-shadow: 2px 2px 10px gray;
+
+            /* Transition */
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            grid-column: 1;
+            grid-row: 1/3;
+            width: 100%;
+            /* height: 100px; */
+        }
+
+        .title {
+            grid-column: 2;
+            grid-row: 1;
+            color: blueviolet;
+            font-weight: bold;
+        }         
+
+        .desc {
+            grid-column: 2;
+            grid-row: 2;
+            font-size: large;
+            color: blueviolet;
+        }        
+
+        .btn {
+            grid-row: 4;
+            grid-column: 1/3;
+
+            font-size: medium;
+        }        
+
+        .badge {
+            grid-row: 3;
+            grid-column: 1;
+            /* background-color: lightgreen; */
+            text-align: justify;
+            color: green;
+            padding: 5px ;
+            font-size: 15px;
+            width: fit-content;
+        }
+
+        button {
+            background-color: cadetblue;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        /* Contact Form  */
+
+        .contact-form {
+            margin-top: 20px;
+            width: 230px;
+
+        }
+        .contact-form label {
+            margin-left: 10px;
+            font-weight: bold;
+            
+        }
+
+        input, select, textarea {
+            /* margin-top: 10px; */
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border: 2px solid green;
+            background-color: lightyellow;
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: cadetblue;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            align-items: center;
+            margin-left: 20px;
+            width: 100%;
+            padding: 20px;
+            cursor: pointer;
+        }        
+    </style>
+</head>
+
+<body>
+        <header>
+            <h1 class="main-title">Welcome to the Third Assignment</h1>
+        </header>
+
+        <!-- 1. Responsive Navigation Bar -->
+        <section class="navigate-sec">       
+            <nav>
+                <img src="images/bank-logo.jpg" alt="This is our project's logo designed for the bank." class="logo" style="width:50px;height:50px">
+
+                <ul class="nav-links">  
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Resource</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <main>
+            <!-- 2. Project Card -->
+            <articale class="card">
+                <img src="images/core-banking.jpg" alt="core-banking system logo which is our current project." class="corebanking">
+                <span class="badge">Web Design</span>
+                
+                <h2 class="title">Core-banking System</h2>
+                <p class="desc">Core banking systems (CBS) are the backend software powering a bank’s essential, 
+                    real-time operations, including processing daily transactions, managing accounts, deposits, loans, and,
+                    says IBM, customer information. Modern solutions like Temenos and Thought Machine enable, 
+                    say Vacuumlabs, cloud-native, API-driven, and scalable operations, allowing financial institutions to, 
+                    according to Finastra, 
+                    accelerate digital transformation and improve customer experience.</p>
+                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
+            </articale>
+
+            <!-- 3. Contact Form (Accessible)-->
+            <section class="contact-form">
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required placeholder="fullname: e.g. Aman Aghajani"><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="email: e.g. example@domain.com"><br><br>
+                    
+                    <label for="subject">Subject:</label><br>
+                    <select id="subject" required>
+                        <option value="">Choose one</option>
+                        <option value="web">Web Design</option>
+                        <option value="support">Support</option>
+                    </select>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" style="width: 250px; height: 150px;" name="message" required placeholder="your message"></textarea><br><br>
+
+                    <button type="submit" style="display: block;">Submit</button><br>                
+                </form>
+            </section>
+        </main>
+</body>
