@@ -81,6 +81,22 @@
             padding: 40px;            
         }
 
+        .prjTitle{
+            display: flex;
+            justify-content: center;
+            color: goldenrod;            
+        }
+        .searchBar {
+            align-items: center;
+            width: 100%;
+            max-width: 20rem;            
+        }
+        #inputSearch{
+            display:flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 300px;
+        }
         .projects{
             display: flex;
             justify-content: center;
@@ -195,7 +211,7 @@
             border-radius: 5px;
         }
 
-        input:focus, select:focus, textarea:focus {
+        input:focus, inputSearch:focus, select:focus, textarea:focus {
             border: 2px solid green;
             background-color: lightyellow;
             outline: none;
@@ -237,57 +253,25 @@
 
     <!-- 2. Project Card -->        
     <main>
-        <section class="projects">
-            <!-- Core-banking -->
-            <articale class="card">
-                <img src="images/core-banking.jpg" alt="core-banking system logo which is our current project." >
-                
-                <span class="badge">Web Design Features</span>
-                
-                <h3 class="title">Core-banking</h3>
-                <p class="desc">Core banking systems (CBS) are the backend software powering a bank’s essential, 
-                    real-time operations, including processing daily transactions, managing accounts, deposits, loans, and,
-                    says IBM, customer information. Modern solutions like Temenos and Thought Machine enable, 
-                    say Vacuumlabs, cloud-native, API-driven, and scalable operations, allowing financial institutions to, 
-                    according to Finastra, 
-                    accelerate digital transformation and improve customer experience.</p>
-                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
-            </articale>
+        <section class="searchBar">
+            <h1 class="prjTitle">My Projects</h1>
+            <input type="text" id="inputSearch" placeholder="Search by title">
+            <!-- <script>
+                const searchInput = document.querySelector("#inputSearch");
+                const searchValue = searchInput.value.trim().toLowerCase();
+                const filteredProject = myProjects;
+                console.log(searchValue.length());
+                // if (searchValue.length() != 0){
+                    
+                // }
 
-            <articale class="card">
-                <img src="images/aml.jpg" alt="AML is using to control anti-money laundering through banking operations." >
                 
-                <span class="badge">Backend Implementation</span>
-                
-                <h3 class="title">Anti-Money Laundering (AML)</h3>
-                <p class="desc">Anti-Money Laundering (AML) system is a comprehensive framework of laws, 
-                    regulations, and procedures designed to prevent criminals from disguising illegal funds 
-                    as legitimate income. It requires financial institutions to monitor transactions, 
-                    verify customer identities, and report suspicious activities to detect 
-                    and stop financial crime. 
-                    AML systems combat the laundering process—typically involving placement, 
-                    layering, and integration—to prevent the misuse of the financial system for 
-                    money laundering or terrorist financing. </p>
-                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
-            </articale>                
-            <!-- Bill Payments -->
-            <articale class="card">
-                <img src="images/bill-payment.jpg" alt="bill payment provide solutions ensureing safe payment transactions." >
-                <!-- <span class="badge">Backend Implementation</span> -->
-                <span class="badge">Web Application</span>
-                
-                <h3 class="title">Bill Payments</h3>
-                <p class="desc">A bill payment system is
-                    a secure electronic service allowing individuals and businesses 
-                    to pay recurring or one-time invoices—such as utilities, 
-                    rent, or credit cards—directly from a bank account or through digital platforms. 
-                    It automates payments, facilitates scheduling, and 
-                    serves as a digital alternative to paper checks. 
-                    The process usually involves the user adding a payee, 
-                    inputting payment details, and the system initiating the transfer through 
-                    the Automated Clearing House (ACH) or similar secure channels.</p>
-                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
-            </articale>                
+
+            </script> -->
+        </section>
+        
+        <section class="projects">
+
         </section>
         
         <!-- 3. Contact Form (Accessible)-->
@@ -314,6 +298,137 @@
 
                 <button type="submit" style="display: block;">Submit</button><br>                
             </form>
-        </section>
+        </section>        
     </main>
+    <script>
+        // Repository
+        const myProjects = [
+            {   //1
+                imgSrc : "images/core-banking.jpg",
+                alt    : "bill payment provide solutions ensureing safe payment transactions.",
+                badge  : "Web Design Features",
+                title  : "Core-banking",
+                desc   : "A bill payment system is" + 
+                        "a secure electronic service allowing individuals and businesses" +
+                        "to pay recurring or one-time invoices—such as utilities," +
+                        "rent, or credit cards—directly from a bank account or through digital platforms." +
+                        "It automates payments, facilitates scheduling, and " +
+                        "serves as a digital alternative to paper checks." + 
+                        "The process usually involves the user adding a payee," + 
+                        "inputting payment details, and the system initiating the transfer through" + 
+                        "the Automated Clearing House (ACH) or similar secure channels."
+            },
+            {   //2 
+                imgSrc : "images/aml.jpg",
+                alt    : "AML is using to control anti-money laundering through banking operations.",
+                badge  : "Backend Implementation",
+                title  : "Anti-Money Laundering (AML)",
+                desc   : "Anti-Money Laundering (AML) system is a comprehensive framework of laws," + 
+                            "regulations, and procedures designed to prevent criminals from disguising illegal funds" + 
+                            "as legitimate income. It requires financial institutions to monitor transactions," + 
+                            "verify customer identities, and report suspicious activities to detect" + 
+                            "and stop financial crime. " +
+                            "AML systems combat the laundering process—typically involving placement," + 
+                            "layering, and integration—to prevent the misuse of the financial system for" + 
+                            "money laundering or terrorist financing. "
+            },
+            {   //3
+                imgSrc : "images/bill-payment.jpg",
+                alt    : "bill payment provide solutions ensureing safe payment transactions.",
+                badge  : "Web Application",
+                title  : "Bill Payments",
+                desc   : "A bill payment system is" +
+                            "a secure electronic service allowing individuals and businesses " +
+                            "to pay recurring or one-time invoices—such as utilities, " +
+                            "rent, or credit cards—directly from a bank account or through digital platforms. " +
+                            "It automates payments, facilitates scheduling, and " +
+                            "serves as a digital alternative to paper checks. " +
+                            "The process usually involves the user adding a payee," + 
+                            "inputting payment details, and the system initiating the transfer through " +
+                            "the Automated Clearing House (ACH) or similar secure channels."
+            },
+            {   //4 
+                imgSrc : "images/aml.jpg",
+                alt    : "Fraud Detection is using to control fraud detection through banking operations.",
+                badge  : "Backend and UI",
+                title  : "Fraud Detection",
+                desc   : "Fraud Detection system is a comprehensive framework of laws," + 
+                            "regulations, and procedures designed to prevent criminals from disguising illegal funds" + 
+                            "as legitimate income. It requires financial institutions to monitor transactions," + 
+                            "verify customer identities, and report suspicious activities to detect" + 
+                            "and stop financial crime. " +
+                            "AML systems combat the laundering process—typically involving placement," + 
+                            "layering, and integration—to prevent the misuse of the financial system for" + 
+                            "money laundering or terrorist financing. "
+            }                                                            
+        ]
+        
+        //Dynamic Cards 
+        const prjContainer = document.querySelector(".projects");
+        
+        function displayProjects(myProjects){
+
+            prjContainer.innerHTML='';
+
+            myProjects.forEach((project)=>{
+
+                const card= document.createElement("article");
+                card.className="card";
+                card.classList.add("card");
+                    
+                const imgSrc=document.createElement("img");
+                imgSrc.src= project.imgSrc;
+                imgSrc.alt= project.alt;
+                card.appendChild(imgSrc);
+
+                const badge=document.createElement("span");
+                badge.textContent=project.badge;
+                badge.className= "badge";
+                card.appendChild(badge);
+
+                const title=document.createElement("h3");
+                title.textContent=project.title;
+                title.className="title";
+                card.appendChild(title);
+
+                const desc =document.createElement("p");
+                desc.textContent=project.desc;
+                desc.className="desc";
+                card.appendChild(desc);
+
+                const btn=document.createElement("button");
+                btn.type="submit";
+                btn.textContent="View Project";
+                card.appendChild(btn);
+
+                prjContainer.appendChild(card);                    
+            });
+        
+        }
+
+        //Handeling Searchbar
+        const searchInput = document.querySelector("#inputSearch");
+        const filteredProject = myProjects.slice();
+        
+        searchInput.addEventListener("input", ()=> {
+            const searchValue = searchInput.value.trim().toLowerCase();
+
+
+            if (searchValue.length != 0){ 
+                //Searching through title and badge of the projects
+                const filteredProject = myProjects.filter(project => 
+                        project.title.toLowerCase().includes(searchValue)||
+                        project.badge.toLowerCase().includes(searchValue)
+                    );
+                     
+                displayProjects(filteredProject);
+            }
+            else {
+                       
+                displayProjects(filteredProject); 
+            }
+        });
+
+        displayProjects(filteredProject);
+    </script>    
 </body>
