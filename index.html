@@ -310,18 +310,37 @@
                 const prjContainer = document.querySelector(".projects");
 
                 myProjects.forEach((project)=>{
-            
-                   const card = `
-                   <article class="card">
-                       <img src=${project.imgSrc} alt=${project.alt} >
-                       <span class="badge">${project.badge}</span>
-                       <h3 class="title">${project.title}</h3>
-                       <p class="desc">${project.desc}</p>
-                       <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
-                   </article>                
-                   `;
 
-                   prjContainer.innerHTML+=card;
+                   const card= document.createElement("article");
+                   card.className="card";
+                   card.classList.add("card");
+                    
+                   const imgSrc=document.createElement("img");
+                   imgSrc.src= project.imgSrc;
+                   imgSrc.alt= project.alt;
+                   card.appendChild(imgSrc);
+
+                   const badge=document.createElement("span");
+                   badge.textContent=project.badge;
+                   badge.className= "badge";
+                   card.appendChild(badge);
+
+                   const title=document.createElement("h3");
+                   title.textContent=project.title;
+                   title.className="title";
+                   card.appendChild(title);
+
+                   const desc =document.createElement("p");
+                   desc.textContent=project.desc;
+                   desc.className="desc";
+                   card.appendChild(desc);
+
+                   const btn=document.createElement("button");
+                   btn.type="submit";
+                   btn.textContent="View Project";
+                   card.appendChild(btn);
+
+                   prjContainer.appendChild(card);                    
                 });
 
             </script>            
