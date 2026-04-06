@@ -81,6 +81,12 @@
             padding: 40px;            
         }
 
+        .prjTitle{
+            display: flex;
+            justify-content: center;
+            color: goldenrod;            
+        }
+
         .projects{
             display: flex;
             justify-content: center;
@@ -237,57 +243,88 @@
 
     <!-- 2. Project Card -->        
     <main>
+        <h1 class="prjTitle">My Projects</h1>
         <section class="projects">
-            <!-- Core-banking -->
-            <articale class="card">
-                <img src="images/core-banking.jpg" alt="core-banking system logo which is our current project." >
-                
-                <span class="badge">Web Design Features</span>
-                
-                <h3 class="title">Core-banking</h3>
-                <p class="desc">Core banking systems (CBS) are the backend software powering a bank’s essential, 
-                    real-time operations, including processing daily transactions, managing accounts, deposits, loans, and,
-                    says IBM, customer information. Modern solutions like Temenos and Thought Machine enable, 
-                    say Vacuumlabs, cloud-native, API-driven, and scalable operations, allowing financial institutions to, 
-                    according to Finastra, 
-                    accelerate digital transformation and improve customer experience.</p>
-                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
-            </articale>
+            <script>
+                const myProjects = [
+                    {
+                        imgSrc : "images/core-banking.jpg",
+                        alt    : "bill payment provide solutions ensureing safe payment transactions.",
+                        badge  : "Web Design Features",
+                        title  : "Core-banking",
+                        desc   : "A bill payment system is" + 
+                                "a secure electronic service allowing individuals and businesses" +
+                                "to pay recurring or one-time invoices—such as utilities," +
+                                "rent, or credit cards—directly from a bank account or through digital platforms." +
+                                "It automates payments, facilitates scheduling, and " +
+                                "serves as a digital alternative to paper checks." + 
+                                "The process usually involves the user adding a payee," + 
+                                "inputting payment details, and the system initiating the transfer through" + 
+                                "the Automated Clearing House (ACH) or similar secure channels."
+                    },
+                    {   //2 
+                        imgSrc : "images/aml.jpg",
+                        alt    : "AML is using to control anti-money laundering through banking operations.",
+                        badge  : "Backend Implementation",
+                        title  : "Anti-Money Laundering (AML)",
+                        desc   : "Anti-Money Laundering (AML) system is a comprehensive framework of laws," + 
+                                 "regulations, and procedures designed to prevent criminals from disguising illegal funds" + 
+                                 "as legitimate income. It requires financial institutions to monitor transactions," + 
+                                 "verify customer identities, and report suspicious activities to detect" + 
+                                 "and stop financial crime. " +
+                                 "AML systems combat the laundering process—typically involving placement," + 
+                                 "layering, and integration—to prevent the misuse of the financial system for" + 
+                                 "money laundering or terrorist financing. "
+                    },
+                    {   //3
+                        imgSrc : "images/bill-payment.jpg",
+                        alt    : "bill payment provide solutions ensureing safe payment transactions.",
+                        badge  : "Web Application",
+                        title  : "Bill Payments",
+                        desc   : "A bill payment system is" +
+                                 "a secure electronic service allowing individuals and businesses " +
+                                 "to pay recurring or one-time invoices—such as utilities, " +
+                                 "rent, or credit cards—directly from a bank account or through digital platforms. " +
+                                 "It automates payments, facilitates scheduling, and " +
+                                 "serves as a digital alternative to paper checks. " +
+                                 "The process usually involves the user adding a payee," + 
+                                 "inputting payment details, and the system initiating the transfer through " +
+                                 "the Automated Clearing House (ACH) or similar secure channels."
+                    },
+                    {   //4 
+                        imgSrc : "images/aml.jpg",
+                        alt    : "Fraud Detection is using to control fraud detection through banking operations.",
+                        badge  : "Backend and UI",
+                        title  : "Fraud Detection",
+                        desc   : "Fraud Detection system is a comprehensive framework of laws," + 
+                                 "regulations, and procedures designed to prevent criminals from disguising illegal funds" + 
+                                 "as legitimate income. It requires financial institutions to monitor transactions," + 
+                                 "verify customer identities, and report suspicious activities to detect" + 
+                                 "and stop financial crime. " +
+                                 "AML systems combat the laundering process—typically involving placement," + 
+                                 "layering, and integration—to prevent the misuse of the financial system for" + 
+                                 "money laundering or terrorist financing. "
+                    }                                                            
+                ]
 
-            <articale class="card">
-                <img src="images/aml.jpg" alt="AML is using to control anti-money laundering through banking operations." >
-                
-                <span class="badge">Backend Implementation</span>
-                
-                <h3 class="title">Anti-Money Laundering (AML)</h3>
-                <p class="desc">Anti-Money Laundering (AML) system is a comprehensive framework of laws, 
-                    regulations, and procedures designed to prevent criminals from disguising illegal funds 
-                    as legitimate income. It requires financial institutions to monitor transactions, 
-                    verify customer identities, and report suspicious activities to detect 
-                    and stop financial crime. 
-                    AML systems combat the laundering process—typically involving placement, 
-                    layering, and integration—to prevent the misuse of the financial system for 
-                    money laundering or terrorist financing. </p>
-                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
-            </articale>                
-            <!-- Bill Payments -->
-            <articale class="card">
-                <img src="images/bill-payment.jpg" alt="bill payment provide solutions ensureing safe payment transactions." >
-                <!-- <span class="badge">Backend Implementation</span> -->
-                <span class="badge">Web Application</span>
-                
-                <h3 class="title">Bill Payments</h3>
-                <p class="desc">A bill payment system is
-                    a secure electronic service allowing individuals and businesses 
-                    to pay recurring or one-time invoices—such as utilities, 
-                    rent, or credit cards—directly from a bank account or through digital platforms. 
-                    It automates payments, facilitates scheduling, and 
-                    serves as a digital alternative to paper checks. 
-                    The process usually involves the user adding a payee, 
-                    inputting payment details, and the system initiating the transfer through 
-                    the Automated Clearing House (ACH) or similar secure channels.</p>
-                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
-            </articale>                
+                const prjContainer = document.querySelector(".projects");
+
+                myProjects.forEach((project)=>{
+            
+                   const card = `
+                   <article class="card">
+                       <img src=${project.imgSrc} alt=${project.alt} >
+                       <span class="badge">${project.badge}</span>
+                       <h3 class="title">${project.title}</h3>
+                       <p class="desc">${project.desc}</p>
+                       <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
+                   </article>                
+                   `;
+
+                   prjContainer.innerHTML+=card;
+                });
+
+            </script>            
         </section>
         
         <!-- 3. Contact Form (Accessible)-->
@@ -314,6 +351,7 @@
 
                 <button type="submit" style="display: block;">Submit</button><br>                
             </form>
-        </section>
+        </section>        
     </main>
+
 </body>
