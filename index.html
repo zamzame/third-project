@@ -84,7 +84,7 @@
         .prjTitle{
             display: flex;
             justify-content: center;
-            color: goldenrod;            
+            color: cadetblue;            
         }
         .searchBar {
             align-items: center;
@@ -97,6 +97,13 @@
             width: 100%;
             max-width: 300px;
         }
+
+        .not-found-message {
+            display: flex;
+            justify-content: center;
+            color: gray;
+            font-style: italic;
+        }        
         .projects{
             display: flex;
             justify-content: center;
@@ -115,7 +122,7 @@
             max-width: 350px;            
             padding: 2px;
             border: 1px solid #ccc;
-            background-color: teal;
+            background-color: rgb(166, 192, 191);
             box-shadow: 2px 2px 10px gray;
             transition: transform 0.3s;
             flex-wrap: wrap;
@@ -146,10 +153,10 @@
         .badge {
             grid-column: 1;
             grid-row: 2;
-            background-color: orange;
+            background-color: white;
             text-align: justify;
             border-radius: 5px;
-            color: green;
+            color: rgb(166, 192, 191);
             padding: 5px ;
             font-size: 15px;
             font-weight: bold;
@@ -164,6 +171,8 @@
         }         
 
         .desc {
+            display: flex;
+            justify-content: center;
             grid-column: 1;
             grid-row: 4;
             font-size: large;
@@ -193,9 +202,11 @@
 
         /* Contact Form  */
         .contact-form {
+            display: block;
+            align-items: center;
             margin-top: 20px;
             width: 100%;
-            max-width: 230px;
+            max-width: 600px;
 
         }
         .contact-form label {
@@ -204,12 +215,18 @@
         }
 
         input, select, textarea {
+            margin:0;
             margin-bottom: 10px;
             margin-left: 10px;
             padding: 10px;
             width: 100%;
+            /* max-width: 600px; */
             border-radius: 5px;
         }
+
+        /* textarea{
+            
+        } */
 
         input:focus, inputSearch:focus, select:focus, textarea:focus {
             border: 2px solid green;
@@ -256,24 +273,14 @@
         <section class="searchBar">
             <h1 class="prjTitle">My Projects</h1>
             <input type="text" id="inputSearch" placeholder="Search by title">
-            <!-- <script>
-                const searchInput = document.querySelector("#inputSearch");
-                const searchValue = searchInput.value.trim().toLowerCase();
-                const filteredProject = myProjects;
-                console.log(searchValue.length());
-                // if (searchValue.length() != 0){
-                    
-                // }
-
-                
-
-            </script> -->
+            <h4 class="not-found-message"></h4>
         </section>
-        
+        <br><br>
+
         <section class="projects">
 
         </section>
-        
+        <br><br>        
         <!-- 3. Contact Form (Accessible)-->
         <section class="contact-form">
             <head>
@@ -294,7 +301,8 @@
                 </select>
 
                 <label for="message">Message:</label><br>
-                <textarea id="message" style="width: 250px; height: 150px;" name="message" required placeholder="your message"></textarea><br><br>
+                <textarea id="message" name="message" required placeholder="your message"></textarea><br><br>
+                
 
                 <button type="submit" style="display: block;">Submit</button><br>                
             </form>
@@ -414,14 +422,26 @@
             const searchValue = searchInput.value.trim().toLowerCase();
 
 
+
             if (searchValue.length != 0){ 
                 //Searching through title and badge of the projects
                 const filteredProject = myProjects.filter(project => 
                         project.title.toLowerCase().includes(searchValue)||
                         project.badge.toLowerCase().includes(searchValue)
                     );
+                    
+                const notFoundMsg= document.querySelector("h4");
+                notFoundMsg.textContent="No projects has been found!";
                      
-                displayProjects(filteredProject);
+                if (filteredProject.length===0){
+                    notFoundMsg.textContent="No projects has been found!";
+
+                } else
+                {
+                    notFoundMsg.textContent = '';
+
+                }
+                displayProjects(filteredProject);                
             }
             else {
                        
