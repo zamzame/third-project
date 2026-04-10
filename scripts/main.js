@@ -1,11 +1,3 @@
-import { aboutMeDescription } from "../data/aboutMe.js";
-//<h3 id="aboutMe">Zamzameh Madjidi</h3> 
-
-const aboutMeContainer = document.querySelector("#aboutMe");
-
-aboutMeContainer.textContent = aboutMeDescription;
-
-
 //Dynamic Cards 
 
 let myProjects = [];
@@ -28,16 +20,17 @@ function displayProjects(myProjects){
         const card= document.createElement("article");
         card.className="card";
         card.classList.add("card");
+                   
+        const cardImage=document.createElement("figure");
+        cardImage.className="cardImg";
+        cardImage.classList.add("cardImage");
+        card.appendChild(cardImage);
             
         const imgSrc=document.createElement("img");
         imgSrc.src= project.imgSrc;
         imgSrc.alt= project.alt;
-        card.appendChild(imgSrc);
-
-        const badge=document.createElement("span");
-        badge.textContent=project.badge;
-        badge.className= "badge";
-        card.appendChild(badge);
+        imgSrc.loading= "lazy";
+        cardImage.appendChild(imgSrc);
 
         const title=document.createElement("h3");
         title.textContent=project.title;
@@ -48,6 +41,11 @@ function displayProjects(myProjects){
         desc.textContent=project.desc;
         desc.className="desc";
         card.appendChild(desc);
+
+        const badge=document.createElement("span");
+        badge.textContent=project.badge;
+        badge.className= "badge";
+        card.appendChild(badge);
 
         const btn=document.createElement("button");
         btn.type="submit";
@@ -66,7 +64,6 @@ searchInput.addEventListener("input", ()=> {
     // let   filteredProject = myProjects.slice();
     let   searchValue = searchInput.value.trim().toLowerCase();
 
-
     if (searchValue.length != 0){ 
         //Searching through title and badge of the projects
         const filteredProject = myProjects.filter(project => 
@@ -74,7 +71,16 @@ searchInput.addEventListener("input", ()=> {
                 project.badge.toLowerCase().includes(searchValue)
             );
                 
-        displayProjects(filteredProject);
+            const notFoundMsg= document.querySelector("h4");
+                     
+            if (filteredProject.length===0){
+                notFoundMsg.textContent="No projects has been found!";
+            } else
+            {
+                notFoundMsg.textContent = '';
+            }
+
+            displayProjects(filteredProject); 
     }
     else {
                 
@@ -82,4 +88,4 @@ searchInput.addEventListener("input", ()=> {
     }
 });
 
-// displayProjects(filteredProject);
+

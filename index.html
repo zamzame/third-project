@@ -10,11 +10,9 @@
 <body>
 
     <!-- 1. Responsive Navigation Bar -->
-    <div>
+    <header>
         <nav>
-            <img src="images/bank-logo.jpg" alt="This is our project's logo designed for the bank." class="page-logo">
-            <!-- <h3>Banking Projects Innovation</h3> -->
-            <h3 id="fullname">Zamzameh Madjidi</h3>
+            <!-- <h1 id="fullname">Zamzameh Madjidi</h1> -->
 
             <ul class="nav-links">  
                 <li>
@@ -22,6 +20,11 @@
                         <img src="images/home-logo.png" alt="jumping to home section" class="home-logo">
                     </a>
                 </li>
+                <li>
+                    <a href="#">
+                        <img src="images/projects-logo.png" alt="jumping to projects section" class="projects-logo">
+                    </a>
+                </li>                
                 <!-- <li><a href="http://www.linkedin.com/in/ZMadjidi">LinkedIn</a></li> -->
                 <li>
                     <a href="http://www.linkedin.com/in/ZMadjidi">
@@ -35,43 +38,102 @@
                 </li>
                 <li>
                     <a href="mailto:z_madjidi@yahoo.com">
-                        <img src="images/mail.png" alt="sent an email to Zamzameh Madjidi's yahoo email address." class="mail-logo">
+                        <img src="images/mail-logo.png" alt="sent an email to Zamzameh Madjidi's yahoo email address." class="mail-logo">
                     </a>
                 </li>
+                <li>
+                    <a href="#">
+                        <img src="images/about-me-logo.png" alt="jumping to projects section" class="aboutMe-logo">
+                    </a>
+                </li>                    
             </ul>
         </nav>
-    </div>
+    </header>
   
     <main>
         <!-- About Me -->
-        <div>
-            <section class="about-me">
+        <div class="about-me">
+            <section class="myInfo" >
                 <figure class="my-img-container">
-                    <img src="images/Me.jpeg" alt="Zamzameh Madjidi's photo" class="my-photo">
+                    <img src="images/Me.jpeg" alt="the site owner's photo" loading="lazy" class="my-photo">
+                    <h1 class="welcome">Welcome to my page...</h1><br>
                 </figure>
-                <h3 id="aboutMe"></h3>            
-            </section>
-        </div>
+                <header class="myFullName">Zamzameh Madjidi</header>
 
+                <section class="titleInfo">
+                    <header class="role">Software Engineer</header><br>
+                    <header class="role">Java Developer</header><br>
+                    <header class="role">IIB/ACE Developer</header>
+                    <header class="role">Software Developer</header>
+                </section>
+
+                <button type="submit" class="btn">Contact Me</button>
+            </section>
+            <section id="mySkills">
+                <div class="techSummary">
+                    <h2>Accomplished Software Engineer with experience in the banking and financial sector</h2>
+                    <p>
+                        Specializing in application development, database management, and system integration.
+                        I have built and maintained scalable enterprise applications, particularly in core banking environments.
+                        With a strong understanding of the full software development lifecycle, I effectively contribute 
+                        from analysis through to deployment and support. I am also adept at aligning technical 
+                        solutions with business needs while ensuring compliance with industry standards.
+                    </p>
+
+                </div> 
+                <div class="techSkills">    
+                    <span class="techTitle">Backend: </span> 
+                    <span> Java, Spring Boot, RESTful APIs, Python, Delphi, T-SQL, ESQL</span>
+                    <span class="techTitle">Front-End: </span>
+                    <span> JavaScript, CSS, HTML, React.JS</span>
+                    <span class="techTitle">Databases: </span>
+                    <span> RDBMS (SQL Server, PostgreSQL, IBM DB2, Oracle), NoSQL(MongoDB)</span>
+                    <span class="techTitle">Enterprise Integration Bus: </span>
+                    <span> IBM Integrated Bus (IIB), App Connect Enterprise (ACE)</span>
+                    <span class="techTitle">Web Services and Data Formats: </span>
+                    <span> REST, SOAP, MQ, JSON and XML</span>
+                    <span class="techTitle">MISC: </span> 
+                    <span> Agile, MVC, DevOps, CI/CD, micro-services, Containerization (Docker, K8s), Jenkins, Git, Postman, Jira, JUnit Testing, MS Azure</span>
+                </div>
+            </section>            
+        </div>
+        <br>
+        <br>
+        <!-- My Projects -->
+            <h2 class="prjTitle">Systems and Solutions</h2>    
+            <br>
+            <br>
         <!-- search bar -->
-        <div>
-            <section class="searchBar">
-                <h1 class="prjTitle">My Projects</h1>
-                <input type="text" id="inputSearch" placeholder="Search by title">
-            </section>
-        </div>
-        
-        <!-- 2. Project Card -->   
-        <div>        
-            <section class="projects">
+        <section class="searchBar"> 
+            <input type="text" id="inputSearch" placeholder="Search by title">
+            <h4 class="not-found-message"></h4>
+        </section>
+        <br><br>
 
-            </section>
-        </div>
+        <section class="projects">
+            <!-- <articale class="card">
+                <figure class="cardImg">
+                    <img src="images/fruad-detection.png" alt="core-banking system logo which is our current project." >
+                </figure>
+                <span class="badge">Web Design Features</span>
+                
+                <h3 class="title">Core-banking</h3>
+                <p class="desc">Core banking systems (CBS) are the backend software powering a bank’s essential, 
+                    real-time operations, including processing daily transactions, managing accounts, deposits, loans, and,
+                    says IBM, customer information. Modern solutions like Temenos and Thought Machine enable, 
+                    say Vacuumlabs, cloud-native, API-driven, and scalable operations, allowing financial institutions to, 
+                    according to Finastra, 
+                    accelerate digital transformation and improve customer experience.</p>
+                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
+            </articale>             -->
+
+        </section>
+        <br><br>        
 
         <!-- 3. Contact Form (Accessible)-->
         <section class="contact-form">
             <head>
-                <h2>Contact Me</h2>
+                <h1 class="contactTitle">Contact Me</h1>
             </head>
             <form>
                 <label for="name">Name:</label><br>
@@ -88,7 +150,7 @@
                 </select>
 
                 <label for="message">Message:</label><br>
-                <textarea id="message" style="width: 250px; height: 150px;" name="message" required placeholder="your message"></textarea><br><br>
+                <textarea id="message" name="message" required placeholder="your message"></textarea><br><br>
 
                 <button type="submit" style="display: block;">Submit</button><br>                
             </form>
