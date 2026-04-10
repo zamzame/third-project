@@ -9,21 +9,21 @@
             {   
                 "imgSrc" : "images/aml.png",
                 "alt"    : "AML is using to control anti-money laundering through banking operations.",
-                "badge"  : "Backend Implementation",
+                "badge"  : "Sr. Software Developer: Java|IIB|ACE|DB2)",
                 "title"  : "Anti-Money Laundering (AML)",
                 "desc"   : "Anti-Money Laundering (AML) system is a comprehensive framework of laws,"
             },
             {   
                 "imgSrc" : "images/bill-payment.png",
                 "alt"    : "bill payment provide solutions ensureing safe payment transactions.",
-                "badge"  : "Web Application",
+                "badge"  : "BackEnd Develeoper: Java|SQL Server|DB2",
                 "title"  : "Bill Payments/Settlement",
                 "desc"   : "A bill payment system is"
             },
             {    
                 "imgSrc" : "images/fruad-detection.png",
                 "alt"    : "Fraud Detection is using to control fraud detection through banking operations.",
-                "badge"  : "Backend and UI",
+                "badge"  : "Software Developer: Java|IIB|ACE|DB2)",
                 "title"  : "Fraud Detection",
                 "desc"   : "Fraud Detection system is a comprehensive framework of laws,"
             }                                                            
