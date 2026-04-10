@@ -3,7 +3,7 @@
                 "imgSrc" : "images/core-banking.png",
                 "alt"    : "bill payment provide solutions ensureing safe payment transactions.",
                 "badge"  : "Web Design Features",
-                "title"  : "Core-banking",
+                "title"  : "Core Banking System",
                 "desc"   : "A bill payment system is"  
             },
             {   
@@ -17,7 +17,7 @@
                 "imgSrc" : "images/bill-payment.png",
                 "alt"    : "bill payment provide solutions ensureing safe payment transactions.",
                 "badge"  : "Web Application",
-                "title"  : "Bill Payments",
+                "title"  : "Bill Payments/Settlement",
                 "desc"   : "A bill payment system is"
             },
             {    
