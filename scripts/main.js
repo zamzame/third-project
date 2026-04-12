@@ -49,6 +49,7 @@ function displayProjects(myProjects){
 
         const btn=document.createElement("button");
         btn.type="submit";
+        btn.className="cardBtn";
         btn.textContent="View Project";
         card.appendChild(btn);
 

@@ -15,33 +15,33 @@
             <ul class="nav-links">  
                 <li>
                     <a href="#">
-                        <img src="images/home-logo.png" alt="jumping to home section" class="home-logo">
+                        <img src="images/home-logo.png" alt="jumping to home section" class="logo">
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/projects-logo.png" alt="jumping to projects section" class="projects-logo">
+                        <img src="images/projects-logo.png" alt="jumping to projects section" class="logo">
                     </a>
                 </li>                
                 <!-- <li><a href="http://www.linkedin.com/in/ZMadjidi">LinkedIn</a></li> -->
                 <li>
                     <a href="http://www.linkedin.com/in/ZMadjidi">
-                        <img src="images/linkedin-logo.png" alt="repesenting Zamzameh Madjidi's LinkedIn profile" class="linkedin-logo">
+                        <img src="images/linkedin-logo.png" alt="repesenting Zamzameh Madjidi's LinkedIn profile" class="logo">
                     </a>
                 </li>                 
                 <li>
                     <a href="https://github.com/zamzame">
-                        <img src="images/github-logo.png" alt="repesenting Zamzameh Madjidi's GitHub profile" class="github-logo">
+                        <img src="images/github-logo.png" alt="repesenting Zamzameh Madjidi's GitHub profile" class="logo">
                     </a>
                 </li>
                 <li>
                     <a href="mailto:z_madjidi@yahoo.com">
-                        <img src="images/mail-logo.png" alt="sent an email to Zamzameh Madjidi's yahoo email address." class="mail-logo">
+                        <img src="images/mail-logo.png" alt="sent an email to Zamzameh Madjidi's yahoo email address." class="logo">
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/about-me-logo.png" alt="jumping to projects section" class="aboutMe-logo">
+                        <img src="images/about-me-logo.png" alt="jumping to projects section" class="logo">
                     </a>
                 </li>                    
             </ul>
@@ -54,7 +54,7 @@
             <section class="myInfo" >
                 <figure class="my-img-container">
                     <img src="images/Me.jpeg" alt="the site owner's photo" loading="lazy" class="my-photo">
-                    <h1 class="welcome">Welcome to my page...</h1><br>
+                    <h1 class="welcome">Welcome to my page!</h1><br>
                 </figure>
                 <section class="nameArea">
                     <header class="myFullName">Zamzameh Madjidi</header>
@@ -66,7 +66,7 @@
                     <header class="role">Software Developer</header>
                 </section>
 
-                <button type="submit" class="btn">Contact Me</button>
+                <button type="submit" class="contactBtn">Contact Me</button>
             </section>
             <section id="mySkills">
                 <div class="techSummary">
@@ -96,13 +96,11 @@
                 </div>
             </section>            
         </div>
-        <br>
-        <br>
-        <!-- My Projects -->
-            <h2 class="prjTitle">Systems and Solutions</h2> <br> <br> 
 
-            <!-- <br> -->
-            <!-- <br> -->
+        <!-- My Projects -->
+        <div class="prjtitleArea">
+            <h2 class="prjTitle">Systems and Solutions</h2>
+        </div>
 
         <!-- search bar -->
         <section class="searchBar"> 
@@ -126,7 +124,7 @@
                     say Vacuumlabs, cloud-native, API-driven, and scalable operations, allowing financial institutions to, 
                     according to Finastra, 
                     accelerate digital transformation and improve customer experience.</p>
-                <button type="submit" class="btn" style="display: block; left-margin: 120px;">View Project</button>
+                <button type="submit" class="cardBtn" style="display: block; left-margin: 120px;">View Project</button>
             </articale>             -->
 
         </section>
@@ -153,8 +151,9 @@
 
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message" required placeholder="your message"></textarea><br><br>
-
-                <button type="submit" style="display: block;">Submit</button><br>                
+                <div class="submitBtn">
+                    <button type="submit">Submit</button><br>     
+                </div>           
             </form>
         </section>        
     </main>
