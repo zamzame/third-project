@@ -33,7 +33,7 @@
                 "badge"  : "Software Developer: Java|APIs|IIB|ACE|DB2",
                 "title"  : "Fraud Detection",
                 "desc"   : "Fraud Detection system is integrating raud customers into the database, ensuring control over account opening, fund transfers, and withdrawals"
-            } 
+            },
             {   
                 "imgSrc" : "images/avocacy.png",
                 "alt"    : "advocacy sys. provides to facilitate collaboration between lawers and their clients",
