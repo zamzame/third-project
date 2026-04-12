@@ -7,7 +7,7 @@
                 "desc"   : "A bill payment system is"  
             },
             {   
-                "imgSrc" : "images/aml.png",
+                "imgSrc" : "images/AML.png",
                 "alt"    : "AML is using to control anti-money laundering through banking operations.",
                 "badge"  : "Java|IIB|ACE|DB2 Developer",
                 "title"  : "Anti-Money Laundering (AML)",
