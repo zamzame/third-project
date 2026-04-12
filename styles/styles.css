@@ -1,23 +1,9 @@
-*, ::before, *::after{
-    box-sizing: border-box;
-}
-
-meta {
-    display: none;
-}
-header {
-    color: white;
-    padding: 30px;
-    margin-left: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f8;
-    /* background-color: lightcyan; */
     width: 100%;
     margin: 0;
-    padding: 50px;
+    padding: 3rem;
 }        
 
 /* 1. Responsive Navigation Bar */
@@ -25,11 +11,6 @@ nav {
     display: flex;
     background-color: black;
     color: white;
-    flex-wrap: wrap;
-}
-
-#fullname {
-    margin: 0.9%;
 }
 
 .home-logo{
@@ -38,8 +19,7 @@ nav {
     max-width: 100%;
     height: 30px;
     max-height: 100%;
-    border-radius: 50%;  
-                
+    border-radius: 50%;                
 }
 
 .projects-logo {
@@ -91,34 +71,33 @@ nav {
     list-style: none;
     padding:0;
     color: blue;  
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .nav-links li{
     margin-left: 20px;
 }
 
-@media (max-width: 600px) {
+/* Handeling Reponsive Design  navigation bar*/
+@media (max-width: 700px) {
     nav {
-        flex-direction: column;   /* stack logo + links */
+        flex-direction: column;  
         align-items: flex-start;
     }
 
     .nav-links {
         display: flex;                
-        flex-direction: column;   /* links vertical */
-
         width: 100%;
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 1rem 0;
     }
 }          
 
 .nav-links li:hover {
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     background-color: gainsboro;
 }
 
@@ -126,32 +105,31 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;            
+    padding: 2rem;            
 }
 
 .about-me{
-    display: grid;
-    grid-template-columns: 2fr;
-    grid-template-rows: 1fr;   
+    display: flex;
     background-color: white; 
-    border: 0.5px solid grey;
+    justify-content: space-evenly;
+    border: 0.05rem solid grey;
     width: 100%;
     max-width: 100rem;
-    height: 700px;
-    padding: 10px;
-    margin: 10px;
-    gap: 10%;
+    min-height: auto;
+    padding: 1rem;
+    margin: 1rem;
+    column-gap: 10px;
+    flex-wrap: wrap;    
 }
 
 .myInfo{
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;    
+    display: grid; 
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;  
-    min-height: 50px;
-    gap: 5px;
-
+    grid-template-rows: auto auto auto auto; 
+    width: 100%;
+    max-width: 700px;      
+    /* border: 0.05rem solid grey; */
+    justify-items: start;
 }
 
 .my-img-container{
@@ -165,11 +143,12 @@ main {
     display: block;        
     grid-column: 1;
     grid-row: 1;
-    margin-left: 0;
+    max-width: 100%;
+    margin-left: 0; 
     width: auto;
-    max-width: 300px;
+    max-width: 20rem;
     height: auto;
-    max-height: 600px;
+    max-height: 20rem;
     border-radius: 50%;
 }
 
@@ -177,8 +156,6 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: 10rem;
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 .welcome {
     display: flex;
@@ -186,31 +163,42 @@ main {
     grid-row: 3;    
     justify-content: flex-end;
     color: cadetblue;
-    font-size: 30px;
+    font-size: 1.8rem;
     font-weight: normal;
     width: auto;
     max-width: fit-content;
     height: fit-content;
-    max-height: 100px;
-    padding: 5px;
-    margin:5px;
+    max-height: 10rem;
+    padding: 0.5rem;
+    margin:0.5rem;
     flex-wrap: nowrap;    
 }
 
-.myFullName{
-    display: flex;
+.nameArea {
+    display: block;
     grid-column: 1;
     grid-row: 2;    
+    align-items: start;
     color: black;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: bold;
+    padding: 0.2rem;
     width: auto;
     max-width: fit-content;
-    height: fit-content;
-    max-height: 50px;
-    padding: 10px;
-    flex-wrap: wrap;
+    height: auto;
+    max-height: fit-content;
+
 }
+/* Handeling Reponsive Design my photo area*/
+@media (max-width: 700px) {
+    .my-img-container{
+        flex-direction: column;
+    }    
+    .nameArea {
+        display:block;
+        align-items: start;
+    }
+} 
 
 .titleInfo{
     display: flex;
@@ -218,66 +206,66 @@ main {
     grid-row: 3;    
     justify-content: space-between;
     color: cadetblue;
-    font-size: x-large;
+    font-size: 1.5rem;
     font-weight: bold;
     width: auto;
     max-width: fit-content;
-    height: fit-content;
-    max-height: 100px;
-    gap: 1%;
-    padding: 10px;
+    height: auto;
+    max-height: fit-content;
+    padding: 0.2rem;
     flex-wrap: wrap;
 }
+
 .role{
     display: flex;
-    grid-column: 1;
-    grid-row: 3;    
     justify-content: center;
     color: cadetblue;
-    font-size: x-large;
-    font-weight: bold;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    margin:0.5rem;
+    border: 0.2rem solid cadetblue;
+    box-shadow: 0.2rem 0.2rem 1rem gray;
+    /* font-size: 1.5rem;
+    font-weight: bold; 
     width: auto;
     max-width: fit-content;
-    height: fit-content;
-    max-height: 100px;
-    border: 2px solid cadetblue;
-    border-radius: 15px;
-    padding: 5px;
-    margin:5px;
-    flex-wrap: wrap;
-    box-shadow: 2px 2px 10px gray;
+    height: auto;    
+    max-height: fit-content; 
+    flex-wrap: wrap; */
 }
+
 .myInfo button {
     display: flex;
     grid-column: 1;
-    grid-row: 4;  
-    justify-content: center;      
-    color: white;    
-    font-size: x-large;
-    min-height: 0px;
-    height: 60px;;
-    max-width: 12rem;
-    width: 70%;
-    padding: 10px;
+    grid-row: 4;    
+    
+    font-size: 1.5rem;  
+    margin: 1rem; 
+    height: 3.5rem;;
+    max-width: 10rem;
+    width: 90%;
+    padding: 0.9rem;
     margin-left: 32rem;
-    border-radius: 15px;
-} 
+    border-radius: 1rem;
+}
+
+/* Handeling Reponsive Design Contact Me button*/
+@media (max-width: 700px) {
+    .myInfo button  {
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+}  
 
 #mySkills {
     display: grid;        
-    grid-column: 2;
-    grid-row: 1;
     grid-template-columns: 1fr;
     grid-template-rows:  auto auto auto auto;   
     width: fit-content;
-    width: auto;
-    max-width: 700px;
-    height: auto;
-    max-height: 400px;
-    min-height: 50px;
-    gap: 5%;     
-    padding: 10px;
-    border-radius: 10px;    
+    width: 100%;
+    max-width: 700px; 
+    padding: 0.5rem;
+    /* border: 0.05rem solid grey; */
     font-weight: lighter;     
     line-height: 1.5; 
 }
@@ -291,30 +279,33 @@ main {
 }
 
 .techSummary p{
-    font-size: larger;
+    font-size: 1.2rem; /*larger*/
 }
 
 .techSkills{
     border: 2px solid cadetblue;
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 1rem;
+    padding: 1.3rem;
     flex-wrap: wrap;    
-    box-shadow: 2px 2px 10px gray;    
-    font-size: larger;
+    box-shadow: 0.2rem 0.2rem 1rem gray;    
+    font-size: 1.2rem;
 }
 .techTitle {
     font-weight: bold;
 }
 
+
+main .prjTitle {
+    justify-content: flex-start;
+    align-items: start;
+}
 .prjTitle{
-    display: flex;
-    justify-content: center;
+    /* display: flex;     */
+    display: block;
     color: black;
     font-weight: bold;
-    font-size: 5em;  
-    margin:0;     
+    font-size: 5rem;  
     min-width: 800px;
-    width: 100%;
     width: fit-content;
 }
 
@@ -326,13 +317,12 @@ main {
 .searchBar {
     align-items: center;
     width: 100%;
-    max-width: 20rem;            
+    max-width: 30rem;            
 }
 #inputSearch{
     display:flex;
     justify-content: center;
-    /* width: 40rem;
-    max-width: 450px; */
+    padding: 10px;
     width: 100%;
     max-width: 300rem;    
 }
@@ -360,7 +350,7 @@ main {
     justify-items: center;
     gap: 15px;
     width: 100%;
-    max-width: 400px;            
+    max-width: 500px;            
     padding: 1px;
     border: 1px solid #ccc;
     background-color: rgb(252, 250, 248);
@@ -370,14 +360,19 @@ main {
     flex-wrap: wrap;
 }
 
-@media (max-width: 600px) {
+/* Handeling Reponsive Design Project Cards*/
+@media (max-width: 700px) {
+    .prjTitle {
+        display: block;
+        align-items: start;
+    }
     .projects {
-        flex-direction: column;   /* cards go one under another */
+        flex-direction: column;   
         align-items: center;
     }
 
     .card {
-        width: 90%;   /* bigger on small screens */
+        width: 90%;   
     }
 }        
 .card:hover {
@@ -416,7 +411,7 @@ main {
     grid-row: 3;
     font-size: large;
     font-weight: lighter;
-    color: white;
+    color: black;
     margin:10px;
 }        
 
@@ -426,18 +421,17 @@ main {
     background-color: white;
     text-align: justify;
     border: 1px solid lightslategray;
-    border-radius: 5px;
-    /* color: rgb(166, 192, 191); */
+    border-radius: 0.5rem;
     color: black;
-    padding: 5px ;
-    font-size: 15px;
+    padding: 0.2rem ;
+    font-size: 1rem;
     font-weight: bold;
     width: fit-content;
 }        
 .card button {
     grid-column: 1;
     grid-row: 5;        
-    color: darkorchid;    
+    color: white;    
     font-size: medium;
 }        
 
@@ -447,8 +441,8 @@ button {
     border-radius: 5px;
     border: none;
     width: 100%;
-    max-width: 100;
-    padding: 20px;
+    max-width: auto;
+    padding: 1.2rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -472,7 +466,6 @@ input, select, textarea {
     margin-left: 10px;
     padding: 10px;
     width: 100%;
-    /* max-width: 600px; */
     border-radius: 5px;
 }
 
@@ -483,16 +476,25 @@ input:focus, inputSearch:focus, select:focus, textarea:focus {
 }
 
 .contact-form button {
-    /* display: flex;
-    justify-content: center; */
     background-color: cadetblue;
     color: white;
-    border-radius: 5px;
+
+    font-weight: bold;
+    align-items: center;
+    cursor: pointer;
+
+    /* border-radius: 5px;
     font-weight: bold;
     border: none;
     align-items: center;
     margin: 0;
     width: 50%;
-    padding: 20px;
+    padding: 20px; */
     cursor: pointer;
+
+    font-size: 1.5rem;  
+    height: 3.5rem;;
+    width: 20rem;
+    padding: 0.9rem;
+    border-radius: 1rem;    
 }        
