@@ -135,8 +135,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto; 
     width: 100%;
-    max-width: 45rem;      
-    /* max-width: 700px;       */
+    max-width: 700px;      
     /* border: 0.05rem solid grey; */
     justify-items: start;
 }
@@ -145,37 +144,40 @@ main {
     display: flex;
     grid-column: 1;
     grid-row: 1;    
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .my-photo{
     display: block;        
-    margin-left: 0; 
-    width: 100%;
+    /* margin-left: 0;  */
+    width: auto;
     max-width: 20rem;
     min-width: 0;
-    height: 100%;
+    height: atuo;
     max-height: 20rem;
     min-height: 0;
     border-radius: 50%;
 }
 
-.welcome {
+.my-img-container h1{
     display: flex;
     flex-direction: column;
     margin-top: 10rem;
+}
+.welcome {
+    display: flex;
     grid-column: 1;
     grid-row: 3;    
-    justify-content: flex-start;
+    justify-content: flex-end;
     color: cadetblue;
     font-size: 1.8rem;
     font-weight: normal;
-    width: 100%;
-    max-width: 20rem;
+    width: auto;
+    max-width: fit-content;
     height: fit-content;
     max-height: 10rem;
     padding: 0.5rem;
-    /* margin:10rem; */
+    margin:0.5rem;
     flex-wrap: nowrap;    
 }
 
@@ -196,12 +198,10 @@ main {
 }
 /* Handeling Reponsive Design my photo area*/
 @media (max-width: 700px) {
-    .my-img-container{
+    /* .my-img-container h1{
         flex-direction: column;
-    } 
-    .my-img-container h1{
         margin-top: 1rem;
-    }  
+    }     */
     .nameArea {
         display:block;
         align-items: start;
@@ -233,19 +233,19 @@ main {
     margin:0.5rem;
     border: 0.2rem solid cadetblue;
     box-shadow: 0.2rem 0.2rem 1rem gray;
+    flex-wrap: wrap;
 }
 
-.contactBtn {
+.myInfo button {
     display: flex;
     grid-column: 1;
-    grid-row: 4;   
-    background-color: cadetblue;
-    color:white; 
+    grid-row: 4;    
+    
     font-size: 1.5rem;  
     margin: 1rem; 
     height: 3.5rem;;
-    max-width: 11rem;
-    width: 100%;
+    max-width: 10rem;
+    width: 90%;
     padding: 0.9rem;
     margin-left: 32rem;
     border-radius: 1rem;
@@ -265,8 +265,7 @@ main {
     grid-template-rows:  auto auto auto auto;   
     width: fit-content;
     width: 100%;
-    max-width: 45rem;      
-    /* max-width: 700px;       */
+    max-width: 700px; 
     padding: 0.5rem;
     /* border: 0.05rem solid grey; */
     font-weight: lighter;     
@@ -282,7 +281,7 @@ main {
 }
 
 .techSummary p{
-    font-size: 1.2rem; 
+    font-size: 1.2rem; /*larger*/
 }
 
 .techSkills{
@@ -296,6 +295,12 @@ main {
 .techTitle {
     font-weight: bold;
 }
+
+
+/* main .prjTitle {
+    justify-content: flex-start;
+    align-items: start;
+} */
 
 .prjtitleArea{
     display: flex;
@@ -311,11 +316,13 @@ main {
     min-width: 3rem;
 }
 
-
+.contactTitle{
+    display: flex;
+    justify-content: center;
+    color: cadetblue;     
+}
 
 .searchBar {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 30rem;            
@@ -323,11 +330,9 @@ main {
 #inputSearch{
     display:flex;
     justify-content: center;
-    padding: 1rem;
-    /* padding: 10px; */
-    font-size: 1.2rem; 
-    /* width: 100%;
-    max-width: 300rem;     */
+    padding: 10px;
+    width: 100%;
+    max-width: 300rem;    
 }
 
 .not-found-message {
@@ -335,15 +340,13 @@ main {
     justify-content: center;
     color: gray;
     width: 100%;
-    max-width: 30rem;   
-    /* max-width: 300px;    */
+    max-width: 300px;   
     font-style: italic;
 }        
 .projects{
     display: flex;
     justify-content: center;
-    column-gap: 1.5rem;
-    /* column-gap: 20px; */
+    column-gap: 20px;
     flex-wrap: wrap;            
 }
 
@@ -353,12 +356,10 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
     justify-items: center;
-    gap: 1.5rem;
-    /* gap: 15px; */
+    gap: 15px;
     width: 100%;
     max-width: 500px;            
-    padding: 0.1rem;
-    /* padding: 1px; */
+    padding: 1px;
     border: 1px solid #ccc;
     background-color: rgb(252, 250, 248);
     color: black;
@@ -388,8 +389,7 @@ main {
     margin: 0;
     padding: 0px;
     width: 100%;
-    /* height: 250px;  */
-    height: 20rem;    
+    height: 250px;    
 }
 
 .cardImg img {
@@ -416,7 +416,7 @@ main {
     font-size: large;
     font-weight: lighter;
     color: black;
-    margin:1rem;
+    margin:10px;
 }        
 
 .badge {
@@ -424,6 +424,7 @@ main {
     grid-row: 4;
     background-color: white;
     text-align: justify;
+    /* align-items: center; */
     justify-content: center;
     border: 1px solid lightslategray;
     border-radius: 0.5rem;
@@ -433,49 +434,45 @@ main {
     font-weight: bold;
     width: fit-content;
 }        
-
-.cardBtn {
-    background-color: cadetblue;
+.card button {
     grid-column: 1;
     grid-row: 5;        
+    color: white;    
+    font-size: medium;
+}        
+
+button {
+    background-color: cadetblue;
     color: white;
-    border-radius: 0.5rem;
+    border-radius: 5px;
     border: none;
     width: 100%;
     max-width: auto;
     padding: 1.2rem;
-    font-size: medium;
     font-weight: bold;
     cursor: pointer;
 }
 
 /* Contact Form  */
-.contactTitle{
-    display: flex;
-    justify-content: center;
-    color: cadetblue;     
-}
 .contact-form {
     display: block;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 20px;
     width: 100%;
-    max-width: 45rem;
+    max-width: 600px;
 }
 .contact-form label {
-    margin-left: 1rem;
-    font-size: larger;
+    margin-left: 10px;
     font-weight: bold;          
 }
 
 input, select, textarea {
-    margin:0.5rem;
-    /* margin-bottom: 0.5rem;
-    margin-left: 0.5rem; */
-    font-size: 1.2rem; 
-    padding: 1rem;
+    margin:0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px;
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: 5px;
 }
 
 input:focus, inputSearch:focus, select:focus, textarea:focus {
