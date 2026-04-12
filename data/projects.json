@@ -1,29 +1,29 @@
 [
             {   
-                "imgSrc" : "images/core-banking.jpg",
+                "imgSrc" : "images/core-banking.png",
                 "alt"    : "bill payment provide solutions ensureing safe payment transactions.",
-                "badge"  : "FullStack Developer: Java|JavaScript|delphi|DB2)",
-                "title"  : "Core-banking",
+                "badge"  : "Java|JavaScript|delphi|DB2 Developer",
+                "title"  : "Core Banking System",
                 "desc"   : "A bill payment system is"  
             },
             {   
-                "imgSrc" : "images/aml.jpg",
+                "imgSrc" : "images/aml.png",
                 "alt"    : "AML is using to control anti-money laundering through banking operations.",
-                "badge"  : "Software Developer: Java|IIB|ACE|DB2)",
+                "badge"  : "Java|IIB|ACE|DB2 Developer",
                 "title"  : "Anti-Money Laundering (AML)",
                 "desc"   : "Anti-Money Laundering (AML) system is a comprehensive framework of laws,"
             },
             {   
-                "imgSrc" : "images/bill-payment.jpg",
+                "imgSrc" : "images/bill-payment.png",
                 "alt"    : "bill payment provide solutions ensureing safe payment transactions.",
-                "badge"  : "BackEnd Develeoper: Java|SQL Server|DB2",
-                "title"  : "Bill Payments",
+                "badge"  : "Java|SQL Server|DB2 Developer",
+                "title"  : "Bill Payments/Settlement",
                 "desc"   : "A bill payment system is"
             },
             {    
-                "imgSrc" : "images/aml.jpg",
+                "imgSrc" : "images/fruad-detection.png",
                 "alt"    : "Fraud Detection is using to control fraud detection through banking operations.",
-                "badge"  : "Software Developer: Java|IIB|ACE|DB2)",
+                "badge"  : "Java|IIB|ACE|DB2 Developer",
                 "title"  : "Fraud Detection",
                 "desc"   : "Fraud Detection system is a comprehensive framework of laws,"
             }                                                            
