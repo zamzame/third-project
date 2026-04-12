@@ -1,0 +1,501 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    width: 100%;
+    margin: 0;
+    padding: 3rem;
+}        
+
+/* 1. Responsive Navigation Bar */
+nav {
+    display: flex;
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    display: block;            
+    width: 100%;
+    max-width: 2rem;
+    height: 100%;
+    max-height: 2rem;
+    border-radius: 50%;
+} 
+/* .home-logo{
+    display: block;            
+    width: 30px;
+    max-width: 100%;
+    height: 30px;
+    max-height: 100%;
+    border-radius: 50%;                
+}
+
+.projects-logo {
+    display: block;            
+    width: 30px;
+    max-width: 100%;
+    height: 30px;
+    max-height: 100%;
+    border-radius: 50%;      
+}
+.linkedin-logo {
+    display: block;            
+    width: 100%;
+    max-width: 2rem;
+    height: 100%;
+    max-height: 2rem;
+    border-radius: 50%;
+}        
+.github-logo {
+    display: block;            
+    width: 30px;
+    max-width: 50px;
+    height: 30px;
+    max-height: 50px;
+    border-radius: 50%;
+}     
+
+.mail-logo {
+    display: block;            
+    width: 30px;
+    max-width: 50px;
+    height: 30px;
+    max-height: 50px;
+    border-radius: 50%;
+}   
+
+.aboutMe-logo {
+    display: block;            
+    width: 30px;
+    max-width: 50px;
+    height: 30px;
+    max-height: 50px;
+    border-radius: 50%;    
+} */
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding:0;
+    color: blue;  
+    /* flex-wrap: wrap; */
+}
+
+.nav-links li{
+    margin-left: 20px;
+}
+
+/* Handeling Reponsive Design  navigation bar*/
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;  
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: flex;                
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}          
+
+.nav-links li:hover {
+    font-weight: bold;
+    border-radius: 0.5rem;
+    background-color: gainsboro;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;            
+}
+
+.about-me{
+    display: flex;
+    background-color: white; 
+    justify-content: space-evenly;
+    border: 0.05rem solid grey;
+    width: 100%;
+    max-width: 100rem;
+    min-height: auto;
+    padding: 1rem;
+    margin: 1rem;
+    column-gap: 10px;
+    flex-wrap: wrap;    
+}
+
+.myInfo{
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto; 
+    width: 100%;
+    max-width: 700px;      
+    /* border: 0.05rem solid grey; */
+    justify-items: start;
+}
+
+.my-img-container{
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;    
+    justify-content: center;
+}
+
+.my-photo{
+    display: block;        
+    /* margin-left: 0;  */
+    width: auto;
+    max-width: 20rem;
+    min-width: 0;
+    height: atuo;
+    max-height: 20rem;
+    min-height: 0;
+    border-radius: 50%;
+}
+
+.my-img-container h1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+.welcome {
+    display: flex;
+    grid-column: 1;
+    grid-row: 3;    
+    justify-content: flex-end;
+    color: cadetblue;
+    font-size: 1.8rem;
+    font-weight: normal;
+    width: auto;
+    max-width: fit-content;
+    height: fit-content;
+    max-height: 10rem;
+    padding: 0.5rem;
+    margin:0.5rem;
+    flex-wrap: nowrap;    
+}
+
+.nameArea {
+    display: block;
+    grid-column: 1;
+    grid-row: 2;    
+    align-items: start;
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0.2rem;
+    width: auto;
+    max-width: fit-content;
+    height: auto;
+    max-height: fit-content;
+
+}
+/* Handeling Reponsive Design my photo area*/
+@media (max-width: 700px) {
+    /* .my-img-container h1{
+        flex-direction: column;
+        margin-top: 1rem;
+    }     */
+    .nameArea {
+        display:block;
+        align-items: start;
+    }
+} 
+
+.titleInfo{
+    display: flex;
+    grid-column: 1;
+    grid-row: 3;    
+    justify-content: space-between;
+    color: cadetblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: auto;
+    max-width: fit-content;
+    height: auto;
+    max-height: fit-content;
+    padding: 0.2rem;
+    flex-wrap: wrap;
+}
+
+.role{
+    display: flex;
+    justify-content: center;
+    color: cadetblue;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    margin:0.5rem;
+    border: 0.2rem solid cadetblue;
+    box-shadow: 0.2rem 0.2rem 1rem gray;
+    flex-wrap: wrap;
+}
+
+.myInfo button {
+    display: flex;
+    grid-column: 1;
+    grid-row: 4;    
+    
+    font-size: 1.5rem;  
+    margin: 1rem; 
+    height: 3.5rem;;
+    max-width: 10rem;
+    width: 90%;
+    padding: 0.9rem;
+    margin-left: 32rem;
+    border-radius: 1rem;
+}
+
+/* Handeling Reponsive Design Contact Me button*/
+@media (max-width: 700px) {
+    .myInfo button  {
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+}  
+
+#mySkills {
+    display: grid;        
+    grid-template-columns: 1fr;
+    grid-template-rows:  auto auto auto auto;   
+    width: fit-content;
+    width: 100%;
+    max-width: 700px; 
+    padding: 0.5rem;
+    /* border: 0.05rem solid grey; */
+    font-weight: lighter;     
+    line-height: 1.5; 
+}
+
+.techSummary {
+    display: block;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 1;  
+    font-size: medium;  
+}
+
+.techSummary p{
+    font-size: 1.2rem; /*larger*/
+}
+
+.techSkills{
+    border: 2px solid cadetblue;
+    border-radius: 1rem;
+    padding: 1.3rem;
+    flex-wrap: wrap;    
+    box-shadow: 0.2rem 0.2rem 1rem gray;    
+    font-size: 1.2rem;
+}
+.techTitle {
+    font-weight: bold;
+}
+
+
+/* main .prjTitle {
+    justify-content: flex-start;
+    align-items: start;
+} */
+
+.prjtitleArea{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.prjTitle{
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 5rem;  
+    min-width: 3rem;
+}
+
+.contactTitle{
+    display: flex;
+    justify-content: center;
+    color: cadetblue;     
+}
+
+.searchBar {
+    align-items: center;
+    width: 100%;
+    max-width: 30rem;            
+}
+#inputSearch{
+    display:flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 300rem;    
+}
+
+.not-found-message {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    width: 100%;
+    max-width: 300px;   
+    font-style: italic;
+}        
+.projects{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    flex-wrap: wrap;            
+}
+
+/* Feature/Project Card Info */
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    justify-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;            
+    padding: 1px;
+    border: 1px solid #ccc;
+    background-color: rgb(252, 250, 248);
+    color: black;
+    box-shadow: 2px 2px 10px gray;
+    transition: transform 0.3s;
+    flex-wrap: wrap;
+}
+
+/* Handeling Reponsive Design Project Cards*/
+@media (max-width: 700px) {
+    .projects {
+        flex-direction: column;   
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;   
+    }
+}        
+.card:hover {
+    transform: scale(1.05);
+}
+.cardImg {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: stretch;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: 250px;    
+}
+
+.cardImg img {
+    width: 100%;
+    height: 100%;    
+    object-fit: cover;
+    display: block;        
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 2;
+    color: black;
+    font-weight: bold;
+}         
+
+.desc {
+    display: flex;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 3;
+    font-size: large;
+    font-weight: lighter;
+    color: black;
+    margin:10px;
+}        
+
+.badge {
+    grid-column: 1;
+    grid-row: 4;
+    background-color: white;
+    text-align: justify;
+    /* align-items: center; */
+    justify-content: center;
+    border: 1px solid lightslategray;
+    border-radius: 0.5rem;
+    color: black;
+    padding: 0.2rem ;
+    font-size: 1rem;
+    font-weight: bold;
+    width: fit-content;
+}        
+.card button {
+    grid-column: 1;
+    grid-row: 5;        
+    color: white;    
+    font-size: medium;
+}        
+
+button {
+    background-color: cadetblue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    max-width: auto;
+    padding: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Contact Form  */
+.contact-form {
+    display: block;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+.contact-form label {
+    margin-left: 10px;
+    font-weight: bold;          
+}
+
+input, select, textarea {
+    margin:0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input:focus, inputSearch:focus, select:focus, textarea:focus {
+    border: 2px solid green;
+    background-color: lightyellow;
+    outline: none;
+}
+
+.submitBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form button {
+    display: block;
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    font-size: 1.5rem;  
+    height: 3.5rem;;
+    width: 20rem;
+    padding: 0.9rem;
+    border-radius: 1rem;    
+    cursor: pointer;    
+}        
