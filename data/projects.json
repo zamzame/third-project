@@ -1,31 +1,94 @@
 [
             {   
-                "imgSrc" : "images/core-banking.jpg",
+                "imgSrc" : "images/core-banking.png",
                 "alt"    : "bill payment provide solutions ensureing safe payment transactions.",
-                "badge"  : "FullStack Developer: Java|JavaScript|delphi|DB2)",
-                "title"  : "Core-banking",
-                "desc"   : "A bill payment system is"  
+                "badge"  : "Java|APIs|JavaScript|Delphi|T-SQL|DB2",
+                "title"  : "Core-banking System",
+                "desc"   : "A core-Banking System is managing essential operations such as customer accounts, transactions, deposits, loans, and payments, and enables real-time processing and allows customers to access banking services across branches and digital channels securely and efficiently."  
             },
             {   
-                "imgSrc" : "images/aml.jpg",
+                "imgSrc" : "images/AML.png",
                 "alt"    : "AML is using to control anti-money laundering through banking operations.",
-                "badge"  : "Software Developer: Java|IIB|ACE|DB2)",
+                "badge"  : "Java|APIs|IIB|ACE|DB2",
                 "title"  : "Anti-Money Laundering (AML)",
-                "desc"   : "Anti-Money Laundering (AML) system is a comprehensive framework of laws,"
+                "desc"   : "Anti-Money Laundering (AML) System is integrating blacklisted into the database, ensuring control over account opening, fund transfers, and withdrawals"
             },
             {   
-                "imgSrc" : "images/bill-payment.jpg",
-                "alt"    : "bill payment provide solutions ensureing safe payment transactions.",
-                "badge"  : "BackEnd Develeoper: Java|SQL Server|DB2",
-                "title"  : "Bill Payments",
-                "desc"   : "A bill payment system is"
+                "imgSrc" : "images/bill-payment.png",
+                "alt"    : "bill payment provide solutions ensureing safe payment transactions",
+                "badge"  : "Java|JavaScript|Delphi|T-SQL|DB2",
+                "title"  : "Bill Payments/Settlement",
+                "desc"   : "A Bill Payments/Settlement system is handeling bill payments and automating bill withdrawal and payment during night shifts"
+            },
+            {   
+                "imgSrc" : "images/ele-bills.png",
+                "alt"    : "bill payment provide solutions ensureing safe payment transactions",
+                "badge"  : "Java|JavaScript|T-SQL|DB2",
+                "title"  : "Bill Payments/Settlement",
+                "desc"   : "An Electronic Bill Payments system is facilitating direct deposits for bill payments into corporate accounts and automating fee distribution to banks based on an agreement"
+            },            
+            {    
+                "imgSrc" : "images/fruad-detection.png",
+                "alt"    : "Fraud Detection is using to control fraud detection through banking operations",
+                "badge"  : "Software Developer: Java|APIs|IIB|ACE|DB2",
+                "title"  : "Fraud Detection",
+                "desc"   : "Fraud Detection system is integrating raud customers into the database, ensuring control over account opening, fund transfers, and withdrawals"
+            } 
+            {   
+                "imgSrc" : "images/avocacy.png",
+                "alt"    : "advocacy sys. provides to facilitate collaboration between lawers and their clients",
+                "badge"  : "Java|Spring Boot| APIs|Python|SQL Server",
+                "title"  : "Advocay Web Application",
+                "desc"   : "An Acvocacy system is a web-based application that streamlines collaboration between lawyers and clients by enabling secure communication and document sharing. It enhances transparency, efficiency, and engagement throughout the legal advocacy process"  
+            },
+            {   
+                "imgSrc" : "images/bond.png",
+                "alt"    : "bond sys. is using to faciliate bonds' banking operations",
+                "badge"  : "Java|Delphi|Struts|DB2|T-SQL",
+                "title"  : "Bonds",
+                "desc"   : "Bonds system is facilitating sales, repurchases, interest payments, and transfers for enhanced system speed "
+            },
+            {   
+                "imgSrc" : "images/certified-notes.png",
+                "alt"    : "certified-notes sys. is using to faciliate bonds' banking operations",
+                "badge"  : "Delphi|Java|Struts|Jasper|T-SQL|DB2",
+                "title"  : "Certified Notes sys.",
+                "desc"   : "A Certified Notes system is encompassing features such as selling/rebuying certified notes, handling interest payments, local branch receipt, central office resending, and report generation"
             },
             {    
-                "imgSrc" : "images/aml.jpg",
-                "alt"    : "Fraud Detection is using to control fraud detection through banking operations.",
-                "badge"  : "Software Developer: Java|IIB|ACE|DB2)",
-                "title"  : "Fraud Detection",
-                "desc"   : "Fraud Detection system is a comprehensive framework of laws,"
-            }                                                            
+                "imgSrc" : "images/MIS.png",
+                "alt"    : "MIS is using to generate statistical reports on banking transactions",
+                "badge"  : "Java|JSP|Jasper|DB2",
+                "title"  : "Management Information Sys. (MIS)",
+                "desc"   : "MIS is generating statistical reports on personal and business account balances, providing detailed insights through customer billing statements"
+            },                                                            
+            {   
+                "imgSrc" : "images/acc-reward.png",
+                "alt"    : "account reward sys. provide solutions ensureing safe deposits of awards to the customers' account",
+                "badge"  : "Java|Delphi|Quick Reports|T-SQL|DB2",
+                "title"  : "Account Reward sys.",
+                "desc"   : "A Account Reward is depositing award funds into winners' accounts, validating, and importing data for a secure process"
+            },
+            {   
+                "imgSrc" : "images/archive.png",
+                "alt"    : "archiving sys. is using to to regulate bank's archiving data",
+                "badge"  : "Java|Spring Boot|APIs|React.JS|DB2",
+                "title"  : "Archive Web Application",
+                "desc"   : "Archive System is regulating bank archival data, enabling management, generating and monitoring reports of the bank"
+            },
+            {   
+                "imgSrc" : "images/wave-pick.png",
+                "alt"    : "wave picking project is a WMS solution that optimizes order fulfillment ",
+                "badge"  : "WMS|Java|Oracle|SSRS",
+                "title"  : "Wave Picking Project",
+                "desc"   : "A Wave Picking Project is a warehouse management project that optimizes order fulfillment by grouping similar orders into waves for efficient, batch-based picking. It improves picker productivity, reduces travel time, and enhances throughput across the supply chain"
+            },
+            {    
+                "imgSrc" : "images/cycle-cnt.png",
+                "alt"    : "cycle count project is a WMS solution focused on improving inventory accuracy through scheduled",
+                "badge"  : "WMS|Java|Oracle|SSRS",
+                "title"  : "Cycle Count Project",
+                "desc"   : "Cycle Count Project is a warehouse management project focused on improving inventory accuracy through scheduled, systematic stock verification without disrupting daily operations. It enhances supply chain efficiency by reducing discrepancies, supporting real-time data integrity, and enabling informed decision-making"
+            }            
+                                                           
         ]
-  
