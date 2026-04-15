@@ -3,7 +3,7 @@ body {
     background-color: #f4f6f8;
     width: 100%;
     margin: 0;
-    padding: 3rem;
+    /* padding: 3rem; */
 }        
 
 /* 1. Responsive Navigation Bar */
@@ -79,7 +79,6 @@ nav {
     list-style: none;
     padding:0;
     color: blue;  
-    /* flex-wrap: wrap; */
 }
 
 .nav-links li{
